@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class VokabelTrainer_24 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner eingabe = new Scanner(System.in);
+		System.out.println("Beginn der Eingabe:");
+		//String Vok1 = eingabe.nextLine();
+		String Vok1 = new String("Baum:tree:2");
+		String [] Vok11 = Vok1.split(":");
+		String Vok2 = new String("See:lake:1");
+		String [] Vok22 = Vok2.split(":");
+		System.out.println(Vok1);
+		System.out.println(Vok2);
+		System.out.println("Ende der Eingabe");
+		System.out.println("Beginn des Trainings");
+		for (int i = 0; i < Vok22.length; i++) {
+			
+		}
+	}
+
+}

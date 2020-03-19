@@ -1,0 +1,3 @@
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\n<web-browsers current\="0">\n<system/>\n<external location\="/usr/bin/firefox" name\="Firefox"/>\n</web-browsers>
+eclipse.preferences.version=1
+internalWebBrowserHistory=file\:/usr/lib/jvm/java-13-openjdk-amd64/test/docs/api/java.base/java/lang/Integer.html\#valueOf-java.lang.String-|*|file\:/usr/lib/jvm/java-13-openjdk-amd64/test/docs/api/java.base/java/lang/Character.html\#getNumericValue-char-|*|file\:/usr/lib/jvm/java-13-openjdk-amd64/test/docs/api/java.base/java/util/Scanner.html|*|file\:/home/peer/eclipse/docs/api/java.base/java/util/Scanner.html\#Scanner-java.io.InputStream-|*|

@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class VokabelTrainer_24 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner eingabe = new Scanner(System.in);
+		//System.out.print("Beginn der Eingabe:");
+		//String Vok1 = eingabe.nextLine();
+		String Vok1 = new String(Baum:tree:2);
+		
+		System.out.print(Vok1);
+		//System.out.print("Ende der Eingabe");
+	}
+
+}

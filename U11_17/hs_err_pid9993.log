@@ -1,0 +1,92 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f11bbc160ad, pid=9993, tid=10004
+#
+# JRE version: OpenJDK Runtime Environment (13.0+33) (build 13+33-Ubuntu-1)
+# Java VM: OpenJDK 64-Bit Server VM (13+33-Ubuntu-1, mixed mode, sharing, tiered, compressed oops, serial gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x30ad]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport %p %s %c %d %P" (or dumping to /home/peer/eclipse-workspace/U11_17/core.9993)
+#
+# If you would like to submit a bug report, please visit:
+#   Unknown
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:42383 -javaagent:/home/peer/eclipse/java-2019-12/eclipse/configuration/org.eclipse.osgi/220/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 lessenfeburary_march.ArrayList2_28
+
+Host: Intel(R) Core(TM) i5-8210Y CPU @ 1.60GHz, 1 cores, 8G, Ubuntu 19.10
+Time: Tue Feb 25 16:52:45 2020 CET elapsed time: 100 seconds (0d 0h 1m 40s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f11b409b800):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=10004, stack(0x00007f11b9868000,0x00007f11b9969000)]
+
+Stack: [0x00007f11b9868000,0x00007f11b9969000],  sp=0x00007f11b9966220,  free space=1016k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x30ad]
+C  [libjimage.so+0x3c72]
+C  [libjimage.so+0x4181]  JIMAGE_FindResource+0xf1
+V  [libjvm.so+0x5c7f96]
+V  [libjvm.so+0x5c9ec3]
+V  [libjvm.so+0xed3c53]
+V  [libjvm.so+0xed27a2]
+V  [libjvm.so+0xed522d]
+V  [libjvm.so+0x6754cb]
+V  [libjvm.so+0x878236]
+j  jdk.internal.misc.Signal.dispatch(I)V+25 java.base@13
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x8804d1]
+V  [libjvm.so+0x87f51a]
+V  [libjvm.so+0xc3790e]
+V  [libjvm.so+0xf1a96e]
+V  [libjvm.so+0xf1fdbf]
+V  [libjvm.so+0xc48acf]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  jdk.internal.misc.Signal.dispatch(I)V+25 java.base@13
+v  ~StubRoutines::call_stub
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00007f11ab7b6530
+
+Register to memory mapping:
+
+RAX=0x0000000000004945 is an unknown value
+RBX=0x00007f11b99662d1 is pointing into the stack for thread: 0x00007f11b409b800
+RCX=0x00007f11b99662f3 is pointing into the stack for thread: 0x00007f11b409b800
+RDX=0x0000000000004945 is an unknown value
+RSP=0x00007f11b9966220 is pointing into the stack for thread: 0x00007f11b409b800
+RBP=0x00007f11b9966240 is pointing into the stack for thread: 0x00007f11b409b800
+RSI=0x0 is NULL
+RDI=0x00007f11bbc1b130: <offset 0x0000000000008130> in /usr/lib/jvm/java-13-openjdk-amd64/lib/libjimage.so at 0x00007f11bbc13000
+R8 =0x00007f11ab7a401c is an unknown value
+R9 =0x00007f11b99670e0 is pointing into the stack for thread: 0x00007f11b409b800
+R10=0x0000000000000031 is an unknown value
+R11=0x00007f11b9967448 is pointing into the stack for thread: 0x00007f11b409b800
+R12=0x000000000000844b is an unknown value
+R13=0x00007f11b99662d0 is pointing into the stack for thread: 0x00007f11b409b800
+R14=0x0 is NULL
+R15=0x00007f11b409c090 points into unknown readable memory: 6a 64 6b 2f 69 6e 74 65
+
+
+Registers:
+RAX=0x0000000000004945, RBX=0x00007f11b99662d1, RCX=0x00007f11b99662f3, RDX=0x0000000000004945
+RSP=0x00007f11b9966220, RBP=0x00007f11b9966240, RSI=0x0000000000000000, RDI=0x00007f11bbc1b130
+R8 =0x00007f11ab7a401c, R9 =0x00007f11b99670e0, R10=0x0000000000000031, R11=0x00007f11b9967448
+R12=0x000000000000844b, R13=0x00007f11b99662d0, R14=0x0000000000000000, R15=0x00007f11b409c090
+RIP=0x00007f11bbc160ad, EFLAGS=0x0000000000010246, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f11b9966220)
+0x00007f11b9966220:   0000000000000000 00007f11b9967368
+0x00007f11b9966230:   00007f11b4026100 00007f11b99662d0
+0x00007f11b9966240:   00007f11b99662b0 00007f11bbc16c72
+0x00007f11b9966250:   0000000000000000 0000000000000000 
+
+Instructions: (pc=0x00007f11bbc160ad)
+0x00007f11bbc15fad:   f3 ff ff 44 03 65 90 e9 3f fe ff ff 0f 1f 80 00
+0x00007f11bbc15fbd:   00 00 00 41 8b 10 41 89 55 00 41 8b 54 00 fc 41
+0x00007f11bbc15fcd:   89 54 05 fc e9 82 fc ff ff 66 2e 0f 1f 84 

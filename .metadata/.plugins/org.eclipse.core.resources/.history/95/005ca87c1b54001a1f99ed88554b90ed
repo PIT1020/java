@@ -1,0 +1,23 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Methoden1_25 {
+
+	public static int gross (int zahlen[]) {
+		int [] arr= {1,2};
+		int max = arr[0];
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i]>max)
+				max = arr[i];
+			return(max);
+			}
+}
+
+
+	public static void main(String[] args) {
+		//Scanner eingabe = new Scanner(System.in);
+		int [] zahlen = {2,5,3};
+		int maxi = gross(zahlen);
+		System.out.println(maxi);
+		
+}}
