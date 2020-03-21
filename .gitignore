@@ -7,3 +7,7 @@ tmp/
 *.swp
 .settings/
 -launch
+
+# java exclusions
+*.class
+*.log
