@@ -1,5 +1,0 @@
-INDEX VERSION 1.131+/home/peer/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
-2855318370.index
-1581524451.index
-890030733.index
-4219922111.index
