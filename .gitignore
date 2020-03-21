@@ -1,0 +1,9 @@
+# some best practice .gitignores for eclise (source https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore)
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+.settings/
+-launch
