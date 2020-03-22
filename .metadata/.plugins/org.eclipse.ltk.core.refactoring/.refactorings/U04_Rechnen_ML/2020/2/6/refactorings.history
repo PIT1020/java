@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;Rechnen.java&apos; to &apos;U11_17/src&apos;&#x0A;- Original project: &apos;U04_Rechnen_ML&apos;&#x0A;- Destination element: &apos;U11_17/src&apos;&#x0A;- Original element: &apos;Rechnen.java&apos;" description="Copy compilation unit" destination="=U11_17/src" element1="/&lt;{Rechnen.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1581015400826" units="1" version="1.0"/>
-</session>
