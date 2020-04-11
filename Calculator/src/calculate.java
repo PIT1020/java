@@ -33,8 +33,13 @@ public class calculate {
 	}
 
 	public static void Division(ArrayList<Integer> input) {
-		for (int i = 0; i < input.size(); i++) {
-			baseValue = input.get(i) / baseValue;
+		int i=0;
+		while (i < input.size()) {
+		for (int j = 0; j < input.size(); j++) {
+			baseValue = input.get(j-1);
+			baseValue = (baseValue / input.get(j));
+		}
+		break;
 		}
 		System.out.print(baseValue);
 	}

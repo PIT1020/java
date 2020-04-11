@@ -1,3 +1,4 @@
+package u31;
 //=============================================================================
 // Projekt      : MAS-SE 20: Java-Vorkurs
 // Titel        : Ü31: Schiff-Navigations-System: Ausgangslage

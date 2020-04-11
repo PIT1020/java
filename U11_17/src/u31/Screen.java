@@ -1,3 +1,4 @@
+package u31;
 import java.util.Scanner; 
 
 /**

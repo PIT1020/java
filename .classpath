@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Calculator/src"/>
+	<classpathentry kind="src" path="U02_HelloWorld/src"/>
+	<classpathentry kind="src" path="U03_StdIn_ML1/src"/>
+	<classpathentry kind="src" path="U03_StdIn_ML2/src"/>
+	<classpathentry excluding="u33/" kind="src" path="U11_17/src"/>
+	<classpathentry kind="src" path="U11_17/src/u33"/>
+	<classpathentry kind="src" path="U32"/>
+	<classpathentry kind="output" path="Calculator/bin"/>
+</classpath>
