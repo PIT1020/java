@@ -6,21 +6,22 @@ public class calculate {
 	private static int baseValueM = 1;
 	private static int baseValue;
 
-	public static void Multiplikation(ArrayList<Integer> input) {
+	public static int Multiplikation(ArrayList<Integer> input) {
 		for (int i = 0; i < input.size(); i++) {
 			baseValueM = baseValueM * input.get(i);
 		}
-		System.out.print(baseValueM);
+		return baseValueM;
 	}
 
-	public static void Addition(ArrayList<Integer> input) {
+	public static int Addition(ArrayList<Integer> input) {
 		for (int i = 0; i < input.size(); i++) {
 			baseValue = baseValue + input.get(i);
 		}
 		System.out.print(baseValue);
+		return baseValue;
 	}
 
-	public static void Subtraktion(ArrayList<Integer> input) {
+	public static int Subtraktion(ArrayList<Integer> input) {
 		int i = 0;
 		while (i < input.size()) {
 			for (int j = 1; j < input.size(); j++) {
@@ -29,10 +30,10 @@ public class calculate {
 			}
 			break;
 		}
-		System.out.print(baseValue);
+		return baseValue;
 	}
 
-	public static void Division(ArrayList<Integer> input) {
+	public static int Division(ArrayList<Integer> input) {
 		int i=0;
 		while (i < input.size()) {
 		for (int j = 0; j < input.size(); j++) {
@@ -41,7 +42,7 @@ public class calculate {
 		}
 		break;
 		}
-		System.out.print(baseValue);
+		return baseValue;
 	}
 
 }

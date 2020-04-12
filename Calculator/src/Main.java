@@ -21,71 +21,73 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-	
+
 	public static ArrayList<Integer> input = new ArrayList<>();
-	
+
 	@SuppressWarnings("unchecked")
 	public void start(Stage stage) {
-	
-	 final FileChooser fileChooser = new FileChooser(); 
-     final Button openButton = new Button("Upload");
-     String Berechnungsarten[] = { "Multiplikation", "Addition", "Subtraktion"}; 
 
-     // Create a combo box 
-     @SuppressWarnings({ "unchecked", "rawtypes" })
-	ComboBox combo_box_Berechnungen = new ComboBox(FXCollections.observableArrayList(Berechnungsarten)); 
+		final FileChooser fileChooser = new FileChooser();
+		final Button openButton = new Button("Upload");
 
-     openButton.setOnAction(
-         new EventHandler<ActionEvent>() {
-             @Override
-             public void handle(final ActionEvent e) {
-                 File file = fileChooser.showOpenDialog(stage);
-                 if (file != null) {
-                     FileChooserSample.openFile(file);
-                 }
-             }
-         });
+		@SuppressWarnings("rawtypes")
+		ComboBox comboBoxBerechnungen = new ComboBox(
+				FXCollections.observableArrayList("Multiplikation", "Addition", "Subktraktion"));
+		Label l = new Label("");
+		comboBoxBerechnungen.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(final ActionEvent e) {
+				try {
+					datahandling.readCsv(input);
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+				do {
+					if (comboBoxBerechnungen.getValue().equals("Multiplikation")) {
+						int result = calculate.Multiplikation(input);
+						l.setText(Integer.toString(result));
+					}
+					if (comboBoxBerechnungen.getValue().equals("Addition")) {
+						int result = calculate.Addition(input);
+						l.setText(Integer.toString(result));
+					}
+					if (comboBoxBerechnungen.getValue().equals("Subtraktion")) {
+						int result = calculate.Subtraktion(input);
+						l.setText(Integer.toString(result));
+					}
 
-     combo_box_Berechnungen.setOnAction(
-             new EventHandler<ActionEvent>() {
-            	 @Override
-                 public void handle(final ActionEvent e) {   
-                	if( e.getSource() == "Multiplikation") {
-                	calculate.Multiplikation(input);
-                	}
-                 }
-             });
-     
+				} while (false);
+			}
+		});
 
-     final GridPane inputGridPane = new GridPane();
-     GridPane.setConstraints(openButton, 0, 0);
-     GridPane.setConstraints(combo_box_Berechnungen, 2, 0);
-     inputGridPane.setHgap(6);
-     inputGridPane.setVgap(6);
-     inputGridPane.getChildren().addAll(openButton,combo_box_Berechnungen);
+		openButton.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(final ActionEvent e) {
+				File file = fileChooser.showOpenDialog(stage);
+				if (file != null) {
+					FileChooserSample.openFile(file);
+				}
+			}
+		});
 
-     final Pane rootGroup = new VBox(12);
-     rootGroup.getChildren().addAll(inputGridPane);
-     rootGroup.setPadding(new Insets(200, 200, 200, 200));
-     
-     stage.setScene(new Scene(rootGroup));
-     stage.show();
- }
-	
+		final GridPane inputGridPane = new GridPane();
+		GridPane.setConstraints(openButton, 0, 0);
+		GridPane.setConstraints(comboBoxBerechnungen, 2, 0);
+		GridPane.setConstraints(l, 2,2);
+		inputGridPane.setHgap(6);
+		inputGridPane.setVgap(6);
+		inputGridPane.getChildren().addAll(openButton, comboBoxBerechnungen,l);
+		final Pane rootGroup = new VBox(12);
+		rootGroup.getChildren().addAll(inputGridPane);
+		rootGroup.setPadding(new Insets(200, 200, 200, 200));
 
-	public static void main(String[] args) {
-		
-		
-		Application.launch(args);
-		ArrayList<Integer> input = new ArrayList<Integer>();
-		Scanner scanner = new Scanner(System.in);
-		try {
-			datahandling.readCsv(input);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		calculate.Addition(input);
-
+		stage.setScene(new Scene(rootGroup));
+		stage.show();
 	}
 
+	public static void main(String[] args) {
+
+		Application.launch();
+
+	}
 }
