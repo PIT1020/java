@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class calculate {
+public class calculate{
 
 	ArrayList<Integer> input = new ArrayList<>();
 	private static int baseValueM = 1;
@@ -33,7 +33,7 @@ public class calculate {
 		return baseValue;
 	}
 
-	public static int Division(ArrayList<Integer> input) {
+	public static int Diff(ArrayList<Integer> input) {
 		int i=0;
 		while (i < input.size()) {
 		for (int j = 0; j < input.size(); j++) {
